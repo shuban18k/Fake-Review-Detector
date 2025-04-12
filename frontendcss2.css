@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+
+body {
+    
+    background: linear-gradient(135deg, #007BFF, #00C8FF);
+    font-family: 'Roboto', Arial, sans-serif; /* Use a modern font like Roboto */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.container.dark-mode {
+    background: #2a2a3c; /* Darker container background */
+    color: #e0e0e0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Subtler shadow */
+}
+
+textarea.dark-mode {
+    background: #333; /* Dark background for text area */
+    border: 2px solid #555;
+    color: #e0e0e0;
+}
+
+textarea.dark-mode:focus {
+    border: 2px solid #007BFF; /* Blue focus border */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+button.dark-mode {
+    background: linear-gradient(135deg, #555, #333); /* Darker button */
+}
+
+.result.dark-mode {
+    background: #2a2a3c; /* Dark result area */
+    color: #e0e0e0;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 500px;
+    width: 90%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation */
+}
+.container:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    color: #c61d1d;
+    margin-bottom: 20px;
+}
+
+/* Text Area Styling */
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ca1a1a;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+textarea:focus {
+    border: 2px solid #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker gradient */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Result Styling */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
